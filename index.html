@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <!-- Required meta tags -->
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <!-- <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css')?>"> -->
+
+        <style>
+            
+            body{
+                background-color: rgb(12, 225, 183);
+                font-size: 30px;
+               
+            }
+            table{
+                background-color: white;
+                margin-top: 150px;
+                padding : 10px 100px 10px 100px;
+                border-radius: 5px;
+                height: 500px;
+                width: 700px;
+                
+            }
+            #login_btn{
+                text-align: center;
+                background-color: rgb(12, 225, 183);
+                width: 100%;
+                padding: 10px;
+                font-size: larger;
+                color: white;
+                border-radius: 3px;
+            }
+            td,button{
+                border: none;
+            }
+            input{
+                border: none;
+                font-size: 30px;
+            }
+            input:focus{
+                outline:  none;
+            }
+            label{
+                color: rgb(12, 225, 183);
+            }
+            a{
+                color: black;
+                text-decoration: none;
+                opacity: 0.5;
+                
+            }
+            #hr {
+            border: 1px solid rgb(12, 225, 183);
+            /* width: 50%; */
+            margin: 20px auto;
+        }
+        </style>
+    </head>
+        <body>
+            <form action="">
+                <table align="center">
+                    <tr align="center">
+                        <td><div id="login">USER LOGIN</div></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UserName"> User Name </label></td>
+                    </tr>
+                    <tr>
+                            <td><input type="text" id="UserName"  ><hr noshade=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password"> Password </label></td>
+                        <tr>
+                            <td><input type="password" id="password" ><hr id="hr" noshade=""></td>
+                        </tr>
+                    </tr>
+                    <tr align="center">
+                        <td ><button type="submit" name="" id="login_btn" onclick="login()"><b>Login</b></button></td>
+                    </tr>
+                    <tr align="center">
+                        <td><a href="#">Forgot Password?</a></td>
+                    </tr>
+                </table>
+            </form>
+            <script>
+                function login(){
+
+                let uname=document.getElementById("UserName").value;
+                let password=document.getElementById("password").value;
+                    if(uname == "" || password==""){
+                        alert("Please ! Enter your data....");
+                    }
+                    else{
+                            alert(uname + " your data enter successfuly");
+                }
+            }
+            </script>
+        </body>
+</html>
